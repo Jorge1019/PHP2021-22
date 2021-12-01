@@ -2,7 +2,7 @@
 $n = 0;
 $d = "";
 $formato = [
-    "romano" => [
+    "romano con la mano" => [
         "i",
         "ii",
         "iii",
