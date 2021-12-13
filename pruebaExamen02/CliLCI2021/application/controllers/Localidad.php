@@ -1,7 +1,7 @@
 <?php
-class localidad extends CI_Controller {
+class Localidad extends CI_Controller {
     public function c() {
-        frame($this,'localidad/c');
+        frame($this,'Localidad/c');
     }
     public function cPost() {
         $nombre=isset($_POST["nombre"])?$_POST["nombre"]:null;
@@ -13,7 +13,7 @@ class localidad extends CI_Controller {
         
      
             
-            frame($this,'localidad/r',$data);
+            frame($this,'Localidad/r',$data);
            
        
     }
