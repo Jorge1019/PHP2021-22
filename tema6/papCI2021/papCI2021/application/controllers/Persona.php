@@ -20,7 +20,7 @@ class Persona extends CI_Controller {
     }
     
     public function logout() {
-        rolAutorizado(['auth','admin']);
+        
         
         if (session_status() == PHP_SESSION_NONE) {session_start ();}
         if (isset($_SESSION['usuario'])) {
@@ -30,7 +30,7 @@ class Persona extends CI_Controller {
     }
     
     public function r() {
-        rolAutorizado(['auth','admin']);
+        
         
         $this->load->model('Persona_model');
         $data['personas'] = $this->Persona_model->getAll();
@@ -38,7 +38,7 @@ class Persona extends CI_Controller {
     }
     
     public function c() {
-        rolAutorizado(['admin']);
+        
         
         $this->load->model('Pais_model');
         $data['paises'] = $this->Pais_model->getAll();
@@ -50,7 +50,7 @@ class Persona extends CI_Controller {
     }
     
     public function cPost() {
-        rolAutorizado(['admin']);
+       
         
         $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : 'John Doe';
         $password = isset($_POST['password']) ? $_POST['password'] : '';
@@ -72,7 +72,7 @@ class Persona extends CI_Controller {
     
     function u()
     {
-        rolAutorizado(['admin']);
+        
         
         $idPersona = isset($_GET['idPersona']) ? $_GET['idPersona'] : null;
         
@@ -89,7 +89,7 @@ class Persona extends CI_Controller {
     
     function uPost()
     {
-        rolAutorizado(['admin']);
+        
         
         $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : 'ninguno';
         $idPersona = isset($_POST['idPersona']) ? $_POST['idPersona'] : null;
@@ -109,7 +109,7 @@ class Persona extends CI_Controller {
     }
     
     function d() {
-        rolAutorizado(['admin']);
+        
         
         $idPersona = isset($_GET['idPersona']) ? $_GET['idPersona'] : null;
         $this->load->model('Persona_model');
